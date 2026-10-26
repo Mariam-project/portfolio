@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediTrack · Mariam Tounkara</title>
+  <meta name="description" content="Étude de cas de business analyse : pourquoi les patients en traitement chronique abandonnent leur application de suivi.">
+  <meta name="theme-color" content="#FFF8F2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#241815" media="(prefers-color-scheme: dark)">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="wrap">
+      <a href="index.html" class="wordmark">Mariam Tounkara</a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><span></span><span></span></button>
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="index.html#meditrack" aria-current="true">Étude de cas</a>
+        <a href="index.html#projets">Projets</a>
+        <a href="index.html#competences">Compétences</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="name"><a href="index.html#meditrack" class="back">← Retour</a></p>
+        <h1 class="xl">MediTrack</h1>
+        <p class="lede">Une application de suivi de traitement chronique perd ses utilisateurs après quelques semaines, alors qu'ils continuent de prendre leurs médicaments. Pourquoi, et que faire ?</p>
+        <div class="hero-foot">
+          <p class="status"><b>Étude de cas personnelle</b><br>Contexte fictif, application Medisafe testée en conditions réelles</p>
+          <a href="divers/MediTrack.pdf" target="_blank" rel="noopener" class="more">Dossier complet (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap study">
+      <ol class="toc" aria-label="Sommaire">
+        <li><a href="#cadrage">Cadrage</a></li>
+        <li><a href="#benchmark">Benchmark</a></li>
+        <li><a href="#besoins">Besoins</a></li>
+        <li><a href="#specifications">Spécifications</a></li>
+        <li><a href="#priorisation">Priorisation</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+      </ol>
+
+      <div class="study-body">
+        <section class="chapter reveal" id="cadrage">
+          <p class="label">01 · Cadrage</p>
+          <h2 class="l">Léa prend son traitement, mais n'ouvre plus l'application</h2>
+          <p>Léa a 34 ans et vit avec la maladie de Crohn. Après une poussée sévère, elle télécharge l'application, décidée à être rigoureuse. Trois semaines plus tard, elle prend toujours son traitement, mais elle a cessé de le renseigner.</p>
+          <h3>Problématique</h3>
+          <p>Comment réduire l'abandon du suivi chez les patients en traitement de longue durée, au-delà des 4 à 6 premières semaines ?</p>
+          <h3>Hypothèse</h3>
+          <p>L'application est pensée pour un traitement nouveau et une motivation fraîche. Quand le traitement devient une routine, les rappels perdent leur effet et rien ne prend le relais.</p>
+          <h3>Objectifs</h3>
+          <ul>
+            <li>Réduire le désengagement observé à 6 semaines</li>
+            <li>Augmenter la rétention à 6 mois</li>
+            <li>Viser un usage léger mais régulier, plutôt qu'intense et ponctuel</li>
+          </ul>
+        </section>
+
+        <section class="chapter reveal" id="benchmark">
+          <p class="label">02 · Benchmark</p>
+          <h2 class="l">Une référence médicale, une référence hors secteur</h2>
+          <div class="table">
+            <table>
+              <thead><tr><th>Critère</th><th>Medisafe</th><th>Strava</th></tr></thead>
+              <tbody>
+                <tr><td>Engagement</td><td>Rappels et alarmes persistants</td><td>Encouragements, défis entre amis</td></tr>
+                <tr><td>Motivation</td><td>Individuelle, extrinsèque</td><td>Sociale, communautaire</td></tr>
+                <tr><td>Entourage</td><td>Prévenu seulement en cas d'oubli</td><td>Célèbre chaque réussite</td></tr>
+                <tr><td>Limite</td><td>Rien pour tenir sur la durée</td><td>Pression et comparaison</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>J'ai testé Medisafe moi-même. Le paramétrage est précis et l'inscription n'est pas obligatoire pour démarrer. En revanche, l'historique des changements de dosage n'existe pas, et l'export CSV brut n'est pas lisible par un médecin.</p>
+          <p class="pull">Medisafe empêche d'oublier. Strava aide à tenir. Il fallait garder le second sans la compétition.</p>
+        </section>
+
+        <section class="chapter reveal" id="besoins">
+          <p class="label">03 · Besoins</p>
+          <h2 class="l">Huit besoins, chacun relié à sa source</h2>
+          <p>Le guide d'entretien part du quotidien plutôt que de l'application : « Raconte-moi ta prise d'hier soir », « Te souviens-tu du moment où tu as ralenti ? ».</p>
+          <div class="table">
+            <table>
+              <thead><tr><th>ID</th><th>Besoin</th><th>Origine</th></tr></thead>
+              <tbody>
+                <tr><td>B1</td><td>Voir l'évolution de mon traitement</td><td>Changement de dosage</td></tr>
+                <tr><td>B2</td><td>Être reconnue pour ma régularité, quel que soit mon état</td><td>« À quoi bon cocher ? »</td></tr>
+                <tr><td>B3</td><td>Une application qui me ressemble</td><td>Interface jugée basique</td></tr>
+                <tr><td>B4</td><td>Un rapport utile à mon médecin</td><td>« Il ne l'a pas ouvert »</td></tr>
+                <tr><td>B5</td><td>Me sentir moins seule, sans compétition</td><td>Entretien et benchmark</td></tr>
+                <tr><td>B6</td><td>Garder un intérêt quand la prise devient automatique</td><td>« Je n'ouvre plus l'app »</td></tr>
+                <tr><td>B7</td><td>Un vrai rôle pour mes proches</td><td>« Mon copain n'est pas dans l'app »</td></tr>
+                <tr><td>B8</td><td>Gérer le traitement d'un proche</td><td>Situation d'aidant</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="chapter reveal" id="specifications">
+          <p class="label">04 · Spécifications</p>
+          <h2 class="l">Ce qui entre dans le projet, et ce qui n'y entre pas</h2>
+          <h3>Hors périmètre</h3>
+          <ul>
+            <li>Les rappels de base, qui fonctionnent déjà</li>
+            <li>La télémédecine et la prescription</li>
+            <li>Un tableau de bord pour les soignants, à traiter à part</li>
+          </ul>
+          <div class="table">
+            <table>
+              <thead><tr><th>Exigence</th><th>Besoins</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td>EF01 Historique</td><td>B1</td><td>Frise des changements de dosage</td></tr>
+                <tr><td>EF02 Bilan de régularité</td><td>B2, B6</td><td>Message positif, indépendant du résultat médical</td></tr>
+                <tr><td>EF03 Rapport médecin</td><td>B4</td><td>PDF d'une page, lisible partout</td></tr>
+                <tr><td>EF04 Groupes de soutien</td><td>B5, B7</td><td>Échanges sans classement</td></tr>
+                <tr><td>EF05 Accès d'un proche</td><td>B7</td><td>Résumé de régularité, avec consentement</td></tr>
+                <tr><td>EF06 Personnalisation</td><td>B3</td><td>Thème, traitement mis en avant</td></tr>
+                <tr><td>EF07 Gestion déléguée</td><td>B8</td><td>Un aidant gère le profil d'un proche</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Contraintes</h3>
+          <ul>
+            <li>Consentement explicite pour tout partage de données (RGPD)</li>
+            <li>Aucune surcharge de menus</li>
+            <li>Aucune comparaison entre patients</li>
+          </ul>
+          <h3>Exemple de user story</h3>
+          <p>En tant que patiente chronique, je veux un bilan mensuel de ma régularité, afin de me sentir reconnue pour mes efforts.</p>
+          <p class="disclaimer">Critère d'acceptation : le message reste positif même si l'état de santé s'est dégradé sur la période.</p>
+        </section>
+
+        <section class="chapter reveal" id="priorisation">
+          <p class="label">05 · Priorisation</p>
+          <h2 class="l">D'abord ce qui traite la cause</h2>
+          <div class="moscow">
+            <div class="must"><b>Must</b><small>US01, US02, US03</small>Historique, bilan et rapport médecin.</div>
+            <div><b>Should</b><small>US05, US06</small>Utile, mais les permissions demandent du temps.</div>
+            <div><b>Could</b><small>US04</small>Prometteur, mais la modération est complexe.</div>
+            <div><b>Won't</b><small>US07</small>Consentement et responsabilité à cadrer d'abord.</div>
+          </div>
+          <h3>Processus cible : le bilan mensuel</h3>
+          <ol class="flow">
+            <li>Fin du mois<span>Événement</span></li>
+            <li>Calcul de la régularité<span>Application</span></li>
+            <li>Léa consulte son bilan<span>Patiente</span></li>
+            <li class="branch">Un rendez-vous est prévu ?<span>Décision</span></li>
+            <li>Si oui, génération du rapport PDF<span>Application</span></li>
+            <li>Partage en consultation<span>Patiente</span></li>
+          </ol>
+        </section>
+
+        <section class="chapter reveal" id="roadmap">
+          <p class="label">06 · Roadmap</p>
+          <h2 class="l">Trois releases, un sujet laissé de côté volontairement</h2>
+          <div class="table">
+            <table>
+              <thead><tr><th>Phase</th><th>Période</th><th>Contenu</th></tr></thead>
+              <tbody>
+                <tr><td>Cadrage</td><td>Semaines 1-2</td><td>Besoins, cahier des charges, backlog</td></tr>
+                <tr><td>Release 1</td><td>Mois 1-2</td><td>Historique, bilan, rapport médecin</td></tr>
+                <tr><td>Release 2</td><td>Mois 3</td><td>Accès d'un proche, personnalisation</td></tr>
+                <tr><td>Release 3</td><td>Mois 4-5</td><td>Prototype et test des groupes de soutien</td></tr>
+                <tr><td>Plus tard</td><td>Mois 6 et +</td><td>Gestion déléguée, après cadrage juridique</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><a href="index.html#contact" class="more">Me contacter</a></p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© 2026 Mariam Tounkara</p>
+      <button class="theme-toggle" type="button">Mode sombre</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,400 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <title>Mariam TOUNKARA - Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mariam Tounkara · Business Analyst</title>
+  <meta name="description" content="Ingénieure et designer en dernière année, je cherche un stage de fin d'études en business analyse à partir de mai 2027.">
+  <meta name="theme-color" content="#FFF8F2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#241815" media="(prefers-color-scheme: dark)">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- HEADER SECTION -->
-    <header class="header">
-        <a href="#home" class="logo">Mariam TOUNKARA</a>
 
-        <i class='bx bx-menu' id="menu-icon"></i>
+  <header class="header">
+    <div class="wrap">
+      <a href="#haut" class="wordmark">Mariam Tounkara</a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><span></span><span></span></button>
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="#meditrack">Étude de cas</a>
+        <a href="#projets">Projets</a>
+        <a href="#competences">Compétences</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">A propos</a>
-            <a href="#competence">Compétences</a>
-            <a href="#project">Projets</a>
-            <a href="mailto:tounkarama.pro@gmail.com" id="contact">Me contacter</a>
-        </nav>
-    </header>
-
-    <!-- Home Section -->
-
-    <section id="home" class="home">
-        <div class="home-img">
-            <img src="./images/moi.PNG" alt="Profile Image">
+  <main id="haut">
+    <section class="hero">
+      <div class="wrap">
+        <p class="name">Mariam Tounkara, ingénieure et designer</p>
+        <h1 class="xl">Le bon <mark>problème</mark> avant la bonne solution.</h1>
+        <p class="lede">Je transforme des besoins flous en solutions claires, en faisant le lien entre le métier, la technique et les utilisateurs.</p>
+        <div class="hero-foot">
+          <a href="divers/CV%20Stage.pdf" class="cta" target="_blank" rel="noopener">Mon CV (PDF)</a>
+          <p class="status"><b>Stage de fin d'études en business analyse</b><br>à partir du 3 mai 2027</p>
         </div>
-        <div class="home-content">
-            <h3>Hello,</h3>
-            <h1>Mariam TOUNKARA</h1>
-            <p>Entre <span>Ingénierie et design</span>, je crée des solutions utiles, accessibles et humaines.<br> Si mon profil vous intéresse, 
-                n'hésitez pas à <a href="mailto:tounkarama.pro@gmail.com"><span>me contacter !</span></a></p>
-            <div class="social-media">
-                <a href="https://www.linkedin.com/in/mariamtkr/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/Mariam-project" target="_blank"><i class='bx bxl-github' ></i></a>
-            </div>
-            <a href="./divers/CV Stage.pdf" target="_blank" class="btn">Download CV</a>
-        </div>
-
-        
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about-content">
-            <h2 class="heading">About <span>Me</span> </h2>
-            <h3>Future <span>Ingenieure et Designer</span></h3>
-            <p>Passionnée par les technologies et l'expérience utilisateur, j'allie technique et esthétique 
-                pour créer des solutions innovantes et humaines.<br>
-                Pour moi, le design est avant tout une manière de penser, de comprendre les besoins, et d’imaginer des solutions qui ont du sens. <br>
-                Je me spécialise dans la conception de produits et services où la technique rencontre l’usage — en particulier dans les domaines de la santé, de l'inclusion et de la transition numérique. <br><br>
-                À travers ce portfolio, je partage ma vision d’un design au service des gens, rigoureux, sensible et tourné vers l’action.
-            
-                </p>
-            <a href="mailto:tounkarama.pro@gmail.com" class="btn">Me contacter</a>
+    <section class="block" id="meditrack">
+      <div class="wrap case">
+        <p class="label">Étude de cas</p>
+        <div class="case-main reveal">
+          <h2 class="l">MediTrack : pourquoi les patients abandonnent leur application de suivi</h2>
+          <p class="lede">Une application de suivi de traitement chronique perd ses utilisateurs après quelques semaines, alors qu'ils continuent de prendre leurs médicaments. J'ai repris le sujet de zéro, comme le ferait un Business Analyst.</p>
+          <p class="pull">Le problème n'était pas l'oubli. C'était la motivation sur la durée.</p>
+          <ol class="process" aria-label="Démarche">
+            <li><span>01</span>Cadrage et persona</li>
+            <li><span>02</span>Benchmark Medisafe et Strava</li>
+            <li><span>03</span>Entretien et 8 besoins tracés</li>
+            <li><span>04</span>7 exigences et contraintes RGPD</li>
+            <li><span>05</span>User stories et critères d'acceptation</li>
+            <li><span>06</span>Priorisation MoSCoW</li>
+            <li><span>07</span>Processus cible en BPMN</li>
+            <li><span>08</span>Roadmap en 3 releases</li>
+          </ol>
+          <p><a href="meditrack.html" class="more">Lire l'étude de cas</a></p>
         </div>
-        <div class="about-img">
-            <img src="./images/moi.PNG" alt="">
-        </div>
+      </div>
     </section>
 
-    <!-- Competances Section -->
-    <section id="competence" class="competence">
-        <h2 class="heading">Mes <span>Compétences</span> </h2>
-
-        <div class="competence-container">
-            <div class="competence-box">
-                <i class='bx bx-code'></i>
-                <h3>Informatique</h3>
-                <span class="Sphere"></span>
-
-                    <!-- Including the TagCloud.js script CDN in the document    -->
-                    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
-                    <script>
-                        const Info = [
-                            'HTML', 'CSS', 'JAVASCRIPT',
-                            'React.js','Swift',
-                            'PYTHON', 'JAVA','C++',
-                            'Android Studio','PHP','MYSQL',
-                            'R','Bash','C'
-                        ];
-
-                        var tagCloud = TagCloud('.Sphere', Info, {
-
-                            // Sphere radius in px
-                            radius: 230,
-
-                            // animation speed
-                            // slow, normal, fast
-                            maxSpeed: 'fast',
-                            initSpeed: 'fast',
-
-                            // Rolling direction [0 (top) , 90 (left), 135 (right-bottom)] 
-                            direction: 135,
-
-                            // interaction with mouse or not [Default true (decelerate to rolling init speed, and keep rolling with mouse).]
-                            keep: true
-
-                        });
-
-                        // Giving color to each text in sphere
-                        var color = '#A89787';
-                        document.querySelector('.Sphere').style.color = color;
-                    </script>
-            </div>
-            
-            <div class="competence-box">
-                <i class='bx bx-palette' ></i>
-                <h3>Design</h3>
-                <!-- Including the TagCloud.js script CDN in the document    -->
-                <span class="Sphere1"></span>
-                <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
-                <script>
-                    const Design = [
-                        'Photoshop', 'Illustrator', 'Linearity Curve',
-                        'Première Pro', 'Imovie','InDesign',
-                        'Figma','3DS Max','UX/UI Design',
-                        'Facilitation graphique','Graphisme',
-                        'Gestion de projet','Notion','After Effect'
-                    ];
-
-                    var tagCloud = TagCloud('.Sphere1', Design, {
-
-                        // Sphere radius in px
-                        radius: 230,
-
-                        // animation speed
-                        // slow, normal, fast
-                        maxSpeed: 'fast',
-                        initSpeed: 'fast',
-
-                        // Rolling direction [0 (top) , 90 (left), 135 (right-bottom)] 
-                        direction: 135,
-
-                        // interaction with mouse or not [Default true (decelerate to rolling init speed, and keep rolling with mouse).]
-                        keep: true
-
-                    });
-
-                    // Giving color to each text in sphere
-                    var color = '#A89787';
-                    document.querySelector('.Sphere').style.color = color;
-                </script>
-            </div>
+    <section class="block" id="projets">
+      <div class="wrap">
+        <div class="block-head">
+          <p class="label">Projets</p>
+          <h2 class="l">Projets d'école</h2>
         </div>
+
+        <ol class="work">
+          <li class="reveal">
+            <p class="meta"><b>Glucobuddy</b>Santé · Application mobile</p>
+            <figure class="contain"><img src="images/gluco_buddy.png" alt="Logo et mascotte de l'application Glucobuddy" loading="lazy"></figure>
+            <div class="text">
+              <dl>
+                <div><dt>Besoin</dt><dd>Aider les enfants diabétiques à gérer leur glycémie au quotidien, sans en faire une source d'angoisse.</dd></div>
+                <div><dt>Arbitrage</dt><dd>L'exigence médicale du suivi face à l'âge et à l'autonomie de l'enfant.</dd></div>
+                <div><dt>Réponse</dt><dd>Une application qui mêle éducation, autonomie et douceur.</dd></div>
+              </dl>
+              <a href="https://glucobuddy.my.canva.site/" class="more" target="_blank" rel="noopener">Voir le projet</a>
+            </div>
+          </li>
+
+          <li class="reveal">
+            <p class="meta"><b>EyeHpad</b>Santé · Données</p>
+            <figure><img src="images/eyeHpad.png" alt="Visuel du projet EyeHpad" loading="lazy"></figure>
+            <div class="text">
+              <dl>
+                <div><dt>Besoin</dt><dd>Soulager le personnel des EHPAD et rassurer les familles.</dd></div>
+                <div><dt>Arbitrage</dt><dd>Veiller sur les résidents sans porter atteinte à leur dignité ni à leur vie privée.</dd></div>
+                <div><dt>Réponse</dt><dd>Des caméras thermiques et un logiciel qui analysent des données de santé à distance.</dd></div>
+              </dl>
+              <a href="divers/Mobotix.pdf" class="more" target="_blank" rel="noopener">Lire le dossier (PDF)</a>
+            </div>
+          </li>
+
+          <li class="reveal">
+            <p class="meta"><b>Caddie interactif</b>UX · Commerce</p>
+            <figure><img src="images/Ux%20design.png" alt="Parcours d'écrans du caddie interactif" loading="lazy"></figure>
+            <div class="text">
+              <dl>
+                <div><dt>Besoin</dt><dd>Simplifier les courses pour des clients aux profils très différents.</dd></div>
+                <div><dt>Arbitrage</dt><dd>Un petit écran pour des usages variés : il fallait choisir ce qui compte vraiment.</dd></div>
+                <div><dt>Réponse</dt><dd>Une interface intégrée au caddie, conçue pour la diversité des utilisateurs.</dd></div>
+              </dl>
+              <a href="divers/Ux%20design.pdf" class="more" target="_blank" rel="noopener">Lire le dossier (PDF)</a>
+            </div>
+          </li>
+
+          <li class="reveal">
+            <p class="meta"><b>AI Summarizer</b>Technique · React</p>
+            <figure><img src="images/AI_Summarizer.png" alt="Interface de l'outil AI Summarizer" loading="lazy"></figure>
+            <div class="text">
+              <dl>
+                <div><dt>Besoin</dt><dd>Gagner du temps de lecture sur des articles longs.</dd></div>
+                <div><dt>Démarche</dt><dd>Comprendre de l'intérieur ce qu'une API d'IA sait faire, et où elle s'arrête.</dd></div>
+                <div><dt>Réponse</dt><dd>Une application React qui résume des articles avec l'API d'OpenAI.</dd></div>
+              </dl>
+              <a href="https://splendid-pasca-94cb0f.netlify.app" class="more" target="_blank" rel="noopener">Tester l'outil</a>
+            </div>
+          </li>
+
+          <li class="reveal">
+            <p class="meta"><b>Projet de fin d'études</b>Santé · En cours</p>
+            <p class="soon">Phase de recherche. Présentation prévue en avril 2027.</p>
+          </li>
+        </ol>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-
-    
-    <section id="project" class="project">
-
-        <!-- ************************ Juste mes projets **************************************-->
-        <section id="featured-projects" class="featured-projects">
-            
-            <h2 class="heading">Mes <span>Projets</span></h2>
-            <div class="impacts-projects">
-                <p>
-                    Certains projets marquent plus que d'autres. Ce sont ceux qui résonnent avec nos valeurs, qui ont du sens au-delà de la technique ou de l’esthétique.<br>
-                    Voici les projets qui me tiennent particulièrement à cœur : ceux porteurs d’un <span> social, humain, durable.</span><br>
-                    Ils reflètent ma volonté de mettre mes compétences au service de causes qui comptent.
-                </p>
-                <div class="projects-grid">
-                
-                    <div class="project-card">
-                        <img src="./images/gluco_buddy.png" alt="Glucobbudy">
-                        <div class="project-content">
-                            <h3>Glucobbudy</h3>
-                            <p>Application imaginée pour accompagner les enfants diabétiques dans la gestion de leur glycémie, en combinant éducation, autonomie et douceur.</p>
-                            <a href="https://glucobuddy.my.canva.site/" class="btn">Voir le projet</a>
-                        </div>
-                    </div>
-                
-                    <div class="project-card">
-                        <img src="./images/afridi.png" alt="Afridi">
-                        <div class="project-content">
-                            <h3>Afridi</h3>
-                            <p>Comment améliorer l’image de l’Afrique auprès des plus jeunes ? </p>
-                            <a href="./divers/STS - Observation.pdf" class="btn">En savoir plus</a>
-                        </div>
-                    </div>
-    
-                </div>
-
-                <p>
-                    Bien sûr, ces projets ne sont qu’une facette de mon parcours.<br>
-                    À travers d’autres réalisations, je développe aussi mes compétences techniques en informatique, ma capacité à résoudre des problèmes par le design, ainsi que mon savoir-faire en conception graphique.<br>
-                    En voici un aperçu.
-                </p>
-                
-            </div>
-
-            
-            
-            <div class="projects-grid">
-              
-                <div class="project-card">
-                    <img src="./images/La Paix au Sport.png" alt="La Paix au Sport">
-                    <div class="project-content">
-                        <h3>La Paix au Sport</h3>
-                        <p>Association qui propose des événements dès le début d’année, avec un accès dès la primaire et sans différenciation de genre.</p>
-                        <a href="./divers/La Paix au Sport.pdf" class="btn">En savoir plus</a>
-                    </div>
-                </div>
-            
-                <div class="project-card">
-                    <img src="./images/eyeHpad.png" alt="EyeHpad">
-                    <div class="project-content">
-                        <h3>EyeHpad</h3>
-                        <p>eyeHpad, des caméras thermiques et un logiciel afin d'analyser des donnés santé , "surveiller" à distance pour soulager le personnel et "surveiller" pour rassurer la famille.</p>
-                        <a href="./divers/Mobotix.pdf" class="btn">En savoir plus</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="./images/Bel Air.png" alt="Les Princes de Bel-Air">
-                    <div class="project-content">
-                        <h3>Les Princes de Bel-Air</h3>
-                        <p>Association permettant de renouer les liens avec la police, re - dynamiser le quartier en stoppant les aprioris et permettant d’avoir des espace dédiés pour tous les âges.</p>
-                        <a href="./divers/Bel Air.pdf" class="btn">En savoir plus</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <img src="./images/JPO.png" alt="JPO">
-                    <div class="project-content">
-                        <h3>JPO CY École de Design</h3>
-                        <p>Organisation des premières JPO de CY École de Design</p>
-                        <a href="./divers/JPO.pdf" class="btn">En savoir plus</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="./images/waterguard.png" alt="WaterGuard">
-                    <div class="project-content">
-                        <h3>WaterGuard</h3>
-                        <p>Waterguard : Un totem avec un code couleur marqueur de la situation. Ces dispositifs placés dans la ville permettent de sensibiliser et d'alerter sur le risque d'inondation.</p>
-                        <a href="./divers/WaterGuard.pdf" class="btn">En savoir plus</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="./images/Ux design.png" alt="UX Design">
-                    <div class="project-content">
-                        <h3>UX Design</h3>
-                        <p>Ce projet vise à transformer l'expérience des courses grâce à une solution interactive sur un écran intégré au caddie, en tenant compte des contraintes d'espace et de diversité des utilisateurs.</p>
-                        <a href="./divers/Ux design.pdf" class="btn">En savoir plus</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="./images/calculator.png" alt="calculator">
-                    <div class="project-content">
-                        <h3>Calculatrice</h3>
-                        <p>Développement d'une calculatrice interactive avec HTML, CSS et JavaScript</p>
-                        <a href="https://mariam-project.github.io/Calculator.github.io/" class="btn">Voir le projet</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="./images/fashion.png" alt="fashion">
-                    <div class="project-content">
-                        <h3>Fashion Website</h3>
-                        <p>Un projet de site web moderne et élégant dédié à la mode, développé entièrement avec HTML et CSS. (Interface)</p>
-                        <a href="https://mariam-project.github.io/fashionSite/" class="btn">Voir le projet</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="./images/movies_website.png" alt="movies_website">
-                    <div class="project-content">
-                        <h3>Movies Website</h3>
-                        <p>Création d'une plateforme de streaming inspirée de Netflix, développée en HTML et CSS.(Interface)</p>
-                        <a href="https://mariam-project.github.io/Movies-Website/" class="btn">Voir le projet</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="./images/pawhealth.png" alt="pawhealth">
-                    <div class="project-content">
-                        <h3>Paw Health</h3>
-                        <p>PAWhealth centralise les infos essentielles pour aider les propriétaires à mieux gérer la santé de leurs animaux.</p>
-                        <a href="./divers/REPORT Android studio Mobile programming.pdf" class="btn">Voir le projet</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="./images/Caroussel.png" alt="movies_website">
-                    <div class="project-content">
-                        <h3>Caroussel Figma</h3>
-                        <p>Ce prototype UI/UX présente un design fluide et intuitif, 
-                            permettant aux utilisateurs de naviguer facilement à travers plusieurs images ou 
-                            contenus.</p>
-                        <a href="https://www.figma.com/proto/MhH8NrbvaHVB4l0RCZxIjy/(NEW---Youtube-Video---14.04.23)-3D-Carousel-Slider?node-id=0-1&t=xQD2rbi7Zo47jDVz-1" class="btn">Voir le projet</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <img src="./images/AI_Summarizer.png" alt="AI summarizer">
-                    <div class="project-content">
-                        <h3>AI Summarizer</h3>
-                        <p>Une utilisation d'API d'OpenAI, ici AI Summary en react.js afin de créer des résumés d'articles. </p>
-                        <a href="https://splendid-pasca-94cb0f.netlify.app" class="btn">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <h2 class="heading">Visuels</h2>
-        <!-- *************************Projet Adobe**********************-->
-        <div class="projets_adobe">
-            <div class="div1">
-                <img src="./images/Chaussures.png">
-            </div>
-            <div class="div1_1">
-                <span>Illustrator</span>
-            </div>
-            <div class="div2">
-                <video src="./video/Mariam_TOUNKARA_ID4_Tetris.mp4" controls>
-                    Video not supported
-                </video>
-            </div>
-            <div class="div3">
-                <span>Adobe</span>
-            </div>
-            <div class="div4">
-                <span>After Effects</span>
-            </div>
-            
-            <div class="div5">
-                <img src="./images/Packaging_avant.png" />
-            </div>
-            <div class="div6">
-                <img src="./images/creed2.png">
-            </div>
-            <div class="div7">
-                <span>Photoshop</span>
-            </div>
+    <section class="block" id="competences">
+      <div class="wrap skills reveal">
+        <p class="label">Compétences</p>
+        <div>
+          <h3>Analyse</h3>
+          <ul>
+            <li>Recueil de besoins et entretiens</li>
+            <li>Benchmark</li>
+            <li>Spécifications fonctionnelles</li>
+            <li>User stories, MoSCoW</li>
+            <li>BPMN, roadmap</li>
+          </ul>
         </div>
-        <!--*************************Projets vectornator*********************-->
-        <div class="projets_vectornator">
-
-            <div class="vec1">
-                <img src="./images/IMG_1933.PNG">
-            </div>
-            <div class="vec2">
-                <img src="./images/IMG_1934.PNG">
-            </div>
-            <div class="vec3">
-                <img src="./images/IMG_1935.PNG">
-            </div>
-            <div class="vec4">
-                <img src="./images/IMG_1936.PNG">
-            </div>
-            <div class="titre">
-                <span>Linearity Curve</span>
-            </div>
-            
+        <div>
+          <h3>Design</h3>
+          <ul>
+            <li>Recherche utilisateur, persona</li>
+            <li>UX et UI design</li>
+            <li>Figma, prototypage</li>
+            <li>Facilitation graphique</li>
+          </ul>
         </div>
-
-        
-        
+        <div>
+          <h3>Technique</h3>
+          <ul>
+            <li>Python, R</li>
+            <li>SQL</li>
+            <li>HTML, CSS, JavaScript, React</li>
+            <li>Java</li>
+            <li>API</li>
+          </ul>
+        </div>
+        <p class="also">Aussi : Photoshop, Illustrator, InDesign, After Effects, Premiere Pro, Notion.</p>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <!--
-    <section id="contact" class="contact">
-        <h2 class="heading">Contactez - <span>moi</span></h2>
-
-        <form action=https://formsubmit.co/el/saguto method="post">
-            <div class="input-box">
-                <input type="hidden" name="_subject" value="Nouveau mail!">
-                <input type="text" name="name" placeholder="Votre nom" required>
-                <input type="email" name="email" placeholder="Votre adresse mail" required>
-            </div>
-
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Votre message" required></textarea>
-            <input type="submit" value="Envoyer" class="btn">
-        </form>
-    </section>
-    -->
-    <!-- Footer Section -->
-
-    <footer class="footer">
-        <div class="social">
-            <a href="https://www.linkedin.com/in/mariamtkr/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/Mariam-project" target="_blank"><i class='bx bxl-github' ></i></a>
+    <section class="block contact" id="contact">
+      <div class="wrap case reveal">
+        <p class="label">Contact</p>
+        <div>
+          <a href="mailto:tounkarama.pro@gmail.com" class="mail">tounkarama.pro@gmail.com</a>
+          <div class="elsewhere">
+            <a href="https://www.linkedin.com/in/mariamtkr/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/Mariam-project" target="_blank" rel="noopener">GitHub</a>
+            <a href="divers/CV%20Stage.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+          </div>
         </div>
+      </div>
+    </section>
+  </main>
 
-        <p class="copyright">
-            © Mariam Tounkara - All Rights Reserved
-        </p>
-    </footer>
-    <script src="script.js"></script>
+  <footer class="footer">
+    <div class="wrap">
+      <p>© 2026 Mariam Tounkara</p>
+      <button class="theme-toggle" type="button">Mode sombre</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

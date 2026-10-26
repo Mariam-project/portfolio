@@ -230,3 +230,5 @@ td:first-child { font-weight: 600; white-space: nowrap; }
   .header, .nav { background: var(--bg); backdrop-filter: none; }
 }
 .work figure.contain img { object-fit: contain; padding: 1.5rem; }
+.why { margin-top: 2.25rem; max-width: 38rem; padding-left: 1.25rem; border-left: 3px solid var(--accent); display: grid; gap: 0.5rem; }
+.why p { font-size: 1.0625rem; line-height: 1.6; }

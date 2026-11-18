@@ -1,5 +1,10 @@
 document.documentElement.classList.remove('no-js');
 
+const isEn = document.documentElement.lang === 'en';
+const i18n = isEn
+  ? { open: 'Open menu', close: 'Close menu', toDark: 'Switch to dark mode', toLight: 'Switch to light mode' }
+  : { open: 'Ouvrir le menu', close: 'Fermer le menu', toDark: 'Passer en mode sombre', toLight: 'Passer en mode clair' };
+
 // Header: hairline only once content scrolls under it
 const header = document.querySelector('.header');
 const onScroll = () => header && header.classList.toggle('is-scrolled', window.scrollY > 8);
@@ -12,7 +17,7 @@ const nav = document.querySelector('.nav');
 if (menuBtn && nav) {
   const setOpen = (open) => {
     menuBtn.setAttribute('aria-expanded', String(open));
-    menuBtn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    menuBtn.setAttribute('aria-label', open ? i18n.close : i18n.open);
     nav.classList.toggle('is-open', open);
   };
   menuBtn.addEventListener('click', () => setOpen(menuBtn.getAttribute('aria-expanded') !== 'true'));
@@ -66,7 +71,7 @@ if (toggle) {
   const isDark = () => root.dataset.theme
     ? root.dataset.theme === 'dark'
     : window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const label = () => { toggle.textContent = isDark() ? 'Mode clair' : 'Mode sombre'; };
+  const label = () => { toggle.setAttribute('aria-label', isDark() ? i18n.toLight : i18n.toDark); };
   label();
   toggle.addEventListener('click', () => {
     root.dataset.theme = isDark() ? 'light' : 'dark';

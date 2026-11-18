@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediTrack · Mariam Tounkara</title>
+  <meta name="description" content="Business analysis case study: why patients on long-term treatment abandon their tracking app.">
+  <meta name="theme-color" content="#FFF8F2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#241815" media="(prefers-color-scheme: dark)">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="alternate" hreflang="fr" href="https://mariam-project.github.io/portfolio/meditrack.html">
+  <link rel="alternate" hreflang="en" href="https://mariam-project.github.io/portfolio/en/meditrack.html">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="wrap">
+      <a href="index.html" class="wordmark">Mariam Tounkara</a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span><span></span></button>
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a href="index.html#meditrack" aria-current="true">Case study</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="controls">
+        <div class="lang" role="group" aria-label="Language"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.5 3.6 5.5 3.6 9s-1.2 6.5-3.6 9M12 3c-2.4 2.5-3.6 5.5-3.6 9s1.2 6.5 3.6 9"/></svg><a href="../meditrack.html" hreflang="fr" lang="fr" aria-label="Version française">FR</a><span aria-current="true">EN</span></div>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode"><svg class="icon i-moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="icon i-sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2.5 12h2M19.5 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="name"><a href="index.html#meditrack" class="back">← Back</a></p>
+        <h1 class="xl">MediTrack</h1>
+        <p class="lede">A treatment-tracking app for chronic illness loses its users after a few weeks, even though they keep taking their medication. Why, and what can be done?</p>
+        <div class="why">
+          <h2 class="label">Why this topic</h2>
+          <p>I'm the kind of user who drops an app as soon as it stops making me want to use it. So when I saw that patients kept up their treatment but stopped logging it, it caught my attention: logging was the simplest part. Digging deeper, I mostly realised that outside medical appointments, patients are often alone with their treatment, with no one there day to day to help them keep going.</p>
+        </div>
+        <div class="hero-foot">
+          <p class="status"><b>Personal case study</b><br>Fictional context, Medisafe tested in real conditions</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap study">
+      <ol class="toc" aria-label="Contents">
+        <li><a href="#scoping">Scoping</a></li>
+        <li><a href="#benchmark">Benchmark</a></li>
+        <li><a href="#needs">Needs</a></li>
+        <li><a href="#specifications">Specifications</a></li>
+        <li><a href="#prioritisation">Prioritisation</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+      </ol>
+
+      <div class="study-body">
+        <section class="chapter reveal" id="scoping">
+          <p class="label">01 · Scoping</p>
+          <h2 class="l">Léa takes her treatment, but no longer opens the app</h2>
+          <p>Léa is 34 and lives with Crohn's disease. After a severe flare-up, she downloads the app, determined to be rigorous. Three weeks later, she's still taking her treatment, but she has stopped logging it.</p>
+          <h3>Where Léa comes from</h3>
+          <p>Léa is a fictional character, but her story comes from a situation I know well. When someone close to me had to change their dose, I managed their treatment at first. They were supposed to write down their readings every day in a paper notebook. In practice, they filled everything in just before their appointments, hoping their device had kept the values.</p>
+          <h3>Problem statement</h3>
+          <p>How can we reduce tracking drop-off among patients on long-term treatment, beyond the first 4 to 6 weeks?</p>
+          <h3>Hypothesis</h3>
+          <p>The tracking wasn't done for the patient, but for the appointment. Between two consultations, logging gave them nothing back. Hence my hypothesis: a tracking tool gets abandoned when it gives nothing back day to day.</p>
+          <h3>Objectives</h3>
+          <ul>
+            <li>Reduce the disengagement observed at 6 weeks</li>
+            <li>Increase retention at 6 months</li>
+            <li>Aim for light but regular use, rather than intense and occasional</li>
+          </ul>
+        </section>
+
+        <section class="chapter reveal" id="benchmark">
+          <p class="label">02 · Benchmark</p>
+          <h2 class="l">One medical reference, one from outside the sector</h2>
+          <p>Medisafe is a reference in treatment tracking. Strava has nothing to do with medicine, and that's deliberate: other fields often face the same problems, and have sometimes already found answers. And keeping users motivated over time is something Strava does well.</p>
+          <div class="table">
+            <table>
+              <thead><tr><th>Criterion</th><th>Medisafe</th><th>Strava</th></tr></thead>
+              <tbody>
+                <tr><td>Engagement</td><td>Persistent reminders and alarms</td><td>Encouragement, challenges with friends</td></tr>
+                <tr><td>Motivation</td><td>Individual, extrinsic</td><td>Social, community-based</td></tr>
+                <tr><td>Close circle</td><td>Notified only when a dose is missed</td><td>Celebrates every success</td></tr>
+                <tr><td>Limitation</td><td>Nothing to keep going over time</td><td>Pressure and comparison</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>What I observed while testing Medisafe</h3>
+          <p>I tested it by recreating the real treatment of someone close to me, whose dosage had changed.</p>
+          <ul>
+            <li><strong>What works:</strong> no account needed to get started. You directly enter the medication, dose, times, treatment duration and instructions. The app also reminds you when to refill, tracks other health measures and syncs with Apple Health. Everything is in one place.</li>
+            <li><strong>What holds it back:</strong> the interface is very basic and can't be personalised. It doesn't make you want to invest in it over time.</li>
+            <li><strong>Dosage changes:</strong> you can change the dose for a single intake or for all future ones. However, during my test, I couldn't find any history of these changes.</li>
+            <li><strong>The report:</strong> it's sent by email as a CSV file. When you open it, you see the medication name, the scheduled time and the word "Taken", but no dose and no summary. For a doctor, it doesn't help understand how the treatment is going.</li>
+          </ul>
+          <p class="pull">Medisafe stops you from forgetting. Strava helps you keep going. The goal was to keep the latter, without the competition.</p>
+        </section>
+
+        <section class="chapter reveal" id="needs">
+          <p class="label">03 · Needs</p>
+          <h2 class="l">Eight needs, each linked to its source</h2>
+          <p>The interviews in this project are fictional: I designed an interview guide and applied it to Léa, my persona. The guide starts from daily life rather than the app: "Tell me about last night's dose", "Do you remember when you started to slow down?". To stay honest, each need shows its source: what I actually observed, what my Medisafe test showed, and what remains a hypothesis to check with real patients.</p>
+          <div class="table">
+            <table>
+              <thead><tr><th>ID</th><th>Need</th><th>Source</th></tr></thead>
+              <tbody>
+                <tr><td>N1</td><td>See how my treatment evolves</td><td>Observed with someone close</td></tr>
+                <tr><td>N2</td><td>Be recognised for my consistency, whatever my health</td><td>Hypothesis (persona)</td></tr>
+                <tr><td>N3</td><td>An app that feels like me</td><td>Medisafe test</td></tr>
+                <tr><td>N4</td><td>A report my doctor can actually use</td><td>Observed with someone close</td></tr>
+                <tr><td>N5</td><td>Feel less alone, without competition</td><td>Strava benchmark</td></tr>
+                <tr><td>N6</td><td>Stay engaged once taking the treatment becomes automatic</td><td>Hypothesis (persona)</td></tr>
+                <tr><td>N7</td><td>A real role for my loved ones</td><td>Hypothesis (persona)</td></tr>
+                <tr><td>N8</td><td>Manage a loved one's treatment</td><td>Observed with someone close</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="chapter reveal" id="specifications">
+          <p class="label">04 · Specifications</p>
+          <h2 class="l">What's in scope, and what isn't</h2>
+          <h3>Out of scope, and why</h3>
+          <ul>
+            <li><strong>Reminders:</strong> in my experience, people end up ignoring them. And research shows a deeper limitation: relying on reminders helps repeat an action, but hinders habit formation (<a href="https://discovery.ucl.ac.uk/id/eprint/1468224/" target="_blank" rel="noopener">Stawarz, Cox and Blandford, CHI 2015</a>). Improving them wouldn't solve the drop-off.</li>
+            <li><strong>Telemedicine and a dashboard for healthcare staff:</strong> a deliberate choice. My problem statement focuses on patients, and these topics deserve a separate project.</li>
+          </ul>
+          <div class="table">
+            <table>
+              <thead><tr><th>Requirement</th><th>Needs</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td>FR01 History</td><td>N1</td><td>Timeline of dosage changes</td></tr>
+                <tr><td>FR02 Consistency summary</td><td>N2, N6</td><td>Positive message, independent of medical results</td></tr>
+                <tr><td>FR03 Doctor report</td><td>N4</td><td>One-page PDF, readable anywhere</td></tr>
+                <tr><td>FR04 Support groups</td><td>N5, N7</td><td>Conversations without rankings</td></tr>
+                <tr><td>FR05 Loved-one access</td><td>N7</td><td>Consistency summary, with consent</td></tr>
+                <tr><td>FR06 Personalisation</td><td>N3</td><td>Theme, highlighted treatment</td></tr>
+                <tr><td>FR07 Delegated management</td><td>N8</td><td>A carer manages a loved one's profile</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Constraints</h3>
+          <ul>
+            <li>Explicit consent for any data sharing (GDPR)</li>
+            <li>No menu overload</li>
+            <li><strong>No comparison between patients:</strong> everyone has a different treatment, and even two similar treatments aren't lived the same way, because everyone has their own story and context. Comparing would make no sense, and could be discouraging.</li>
+          </ul>
+          <h3>Example user story</h3>
+          <p>As a patient with a chronic illness, I want a monthly summary of my consistency, so that I feel recognised for my efforts.</p>
+          <p class="disclaimer">Acceptance criterion: the message stays positive even if the patient's health has worsened over the period.</p>
+        </section>
+
+        <section class="chapter reveal" id="prioritisation">
+          <p class="label">05 · Prioritisation</p>
+          <h2 class="l">Tackle the cause first</h2>
+          <div class="moscow">
+            <div class="must"><b>Must</b><small>US01, US02, US03</small>History, summary and doctor report.</div>
+            <div><b>Should</b><small>US05, US06</small>Useful, but permissions take time.</div>
+            <div><b>Could</b><small>US04</small>Promising, but moderation is complex.</div>
+            <div><b>Won't</b><small>US07</small>Consent and liability need scoping first.</div>
+          </div>
+          <h3>Why delegated management can wait</h3>
+          <p>It's a need I lived through myself. But personal experience isn't enough to set a priority: other patients manage their treatment alone and don't need it. In the meantime, a loved one can log into the patient's account. That workaround raises exactly the consent and security questions at stake. So the feature deserves to be designed properly, after a legal review, rather than rushed into the first version.</p>
+          <h3>Target process: the monthly summary</h3>
+          <ol class="flow">
+            <li>End of the month<span>Event</span></li>
+            <li>Consistency is calculated<span>App</span></li>
+            <li>Léa views her summary<span>Patient</span></li>
+            <li class="branch">Is an appointment coming up?<span>Decision</span></li>
+            <li>If so, the PDF report is generated<span>App</span></li>
+            <li>Shared during the consultation<span>Patient</span></li>
+          </ol>
+        </section>
+
+        <section class="chapter reveal" id="roadmap">
+          <p class="label">06 · Roadmap</p>
+          <h2 class="l">Three releases, one topic deliberately set aside</h2>
+          <div class="table">
+            <table>
+              <thead><tr><th>Phase</th><th>Timing</th><th>Content</th></tr></thead>
+              <tbody>
+                <tr><td>Scoping</td><td>Weeks 1-2</td><td>Needs, specifications, backlog</td></tr>
+                <tr><td>Release 1</td><td>Months 1-2</td><td>History, summary, doctor report</td></tr>
+                <tr><td>Release 2</td><td>Month 3</td><td>Loved-one access, personalisation</td></tr>
+                <tr><td>Release 3</td><td>Months 4-5</td><td>Prototype and test of support groups</td></tr>
+                <tr><td>Later</td><td>Month 6+</td><td>Delegated management, after legal review</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><a href="index.html#contact" class="more">Get in touch</a></p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© 2026 Mariam Tounkara</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
